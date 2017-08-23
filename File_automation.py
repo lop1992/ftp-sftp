@@ -113,7 +113,6 @@ def SFTP_upload():
     sf.connect(username = SFTP_USER_NAME,password = SFTP_PASSWORD)
     sftp = paramiko.SFTPClient.from_transport(sf)
     
-    os.chdir(SFTP_LOCAL_FILE)                                                   #切换到本地目录
     SENSE_file((DATE_NOW) + '_commit.txt')
     UPDATE_list(LOG_PATH+(DATE_NOW)+'_commit.txt',F_C_LIST,'r')
     for suml in F_D_LIST:
