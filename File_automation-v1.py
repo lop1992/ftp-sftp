@@ -8,11 +8,6 @@ class transfer(object):
 
     def __init__(self):
         
-        self.LIST = []                                              #设置函数的列表循环
-        self.power = ''                                             #设置打开文件的权限
-        self.listfilename = ''                                      #定义同步ftp文件名的文件
-        self.filename = ''                                          #定义判断文件函数日志的文件
-
         self.ftp = '' 
         self.FTP_PASSWORD = 'ts123456'                              #密码
         self.FTP_HOST_NAME = 'lzh'                                  #账户名
