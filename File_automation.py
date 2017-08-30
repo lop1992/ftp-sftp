@@ -5,8 +5,6 @@ import paramiko
 from datetime import datetime
 '''
 这是一个自动化完成从ftp同步下载文件并实时用sftp上传文件到服务器的脚本。
-因时间关系，所有的文件名仅限英文字母和数字，不能又中文，如有中文需要
-增加编码译码功能。
 <---刘志豪 www.136.om@qq.com --->
 
 
