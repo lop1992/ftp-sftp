@@ -125,21 +125,14 @@ class transfer(object):
             if suml in self.F_C_LIST:
                 pass
             else:
-                self.sftp.put(self.DOWNLOAD_FILE + suml,self.SFTP_REMOTE_FILE + suml)        #上传文件
+                self.sftp.put(self.DOWNLOAD_FILE + suml,(self.SFTP_REMOTE_FILE + suml).encode("gbk"))#上传文件,gbk为win默认编码
                 print('%s 文件%s 上传成功\n'%(datetime.now().strftime('%Y-%m-%d %H:%M'),suml))
                             
                 with open(self.LOG_PATH + datetime.now().date().isoformat() + '_commit.txt','a') as f_commit:
                     f_commit.write(suml+'\n')
                 print(datetime.now().strftime('%Y-%m-%d %H:%M'))               
                 with open(self.LOG_PATH + datetime.now().date().isoformat() + '_C_log.txt','a') as f_log:
-                   print('%s <--*-->成功上传文件<--*-->  %s'%(datetime.now().strftime('%Y-%m-%d %H:%M'),suml),file=f_log)
-        
-
-    def FTP_logout(self):
-        '''退出登陆FTP'''
-        
-        ftp.quit()
-        
+                   print('%s <--*-->成功上传文件<--*-->  %s'%(datetime.now().strftime('%Y-%m-%d %H:%M'),suml),file=f_log)       
 
 if __name__ == '__main__':
     '''主函数'''
