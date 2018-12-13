@@ -1,4 +1,4 @@
 I change file !
  I add a news!
 now i will start top git!
-git tarcks changes.
+git tarcks changes in file.
